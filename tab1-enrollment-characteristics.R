@@ -1,19 +1,19 @@
-#---------------------------
+#------------------------------------
 # tab1-enrollment-characteristics.R
 #
 # Kishor Das (kishorisrt@gmail.com)
 # 
 # summary measures of enrollment
 # characteristics by arm
-#-----------------------------
+#------------------------------------
 
-#----------------------------
+#---------------------------------------
 # input files :
 #            washb-bangladesh-enrol.dta
 #            washb-bangladesh-arm.dta
 # output files:
 #            table-1.Rdata
-#---------------------------
+#---------------------------------------
 
 #---------------------------
 # preamble
