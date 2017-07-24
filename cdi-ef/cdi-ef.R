@@ -16,7 +16,7 @@
 #            washb-bangladesh-eftower-year2.dta
 #
 # output files:
-#            table-4.Rdata
+#            cdi-ef.Rdata
 #---------------------------
 
 #---------------------------
@@ -353,7 +353,7 @@ say_glue<-data.frame(a=c("\u005ctextbf{CDI$\u005cdagger$- say z-score} "),b=c(""
 tower_glue<-data.frame(a=c("\u005ctextbf{EF$\u005cddagger$ Tower test z-score} "),b=c(""),c=c(""),d=c(""),e=c(""),f=c(""))
 anotb_glue<-data.frame(a=c("\u005ctextbf{EF$\u005cddagger$ A not B z-score}"),b=c(""),c=c(""),d=c(""),e=c(""),f=c(""))
 
-table_4<- rbind(
+cdi_ef<- rbind(
   und_glue,
   und_df,
   say_glue,
@@ -363,4 +363,4 @@ table_4<- rbind(
   anotb_glue,
   anotb_df
   )
-save(table_4,file="C:\\Users\\kdas\\Dropbox\\WASHB-cognitive-development-analysis\\results\\raw\\table-4.Rdata")
+save(cdi_ef,file="C:\\Users\\kdas\\Dropbox\\WASHB-cognitive-development-analysis\\results\\raw\\cdi-ef.Rdata")

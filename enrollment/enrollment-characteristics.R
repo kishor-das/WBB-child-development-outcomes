@@ -12,7 +12,7 @@
 #            washb-bangladesh-enrol.dta
 #            washb-bangladesh-arm.dta
 # output files:
-#            table-1.Rdata
+#            enroll-balance.Rdata
 #---------------------------------------
 
 #---------------------------
@@ -55,7 +55,7 @@ for(arm in group[2:8]){
 
 
 n_households<-NULL
-n_households[""]<-"No. of households"
+n_households[""]<-"No. of compounds"
 for(arm in group[2:8]){
   n_households[arm]<-paste("(N = ",table(enrol$arm)[[arm]],")",sep="")
 }
@@ -300,7 +300,7 @@ glue_hw<-c("\u005ctextbf{Handwashing}","","","","","","","")
 glue_steplat<-c("\u005cMyIndent Within 6 steps of latrine","","","","","","","")
 glue_stepkit<-c("\u005cMyIndent Within 6 steps of kitchen","","","","","","","")
 
-table_1<-rbind(
+enroll_balance<-rbind(
   n_households,
   glue_maternal,
   mom_age,
@@ -341,4 +341,4 @@ table_1<-rbind(
   hw_hwkitsoap
 )
 
-save(table_1,file="C:\\Users\\kdas\\Dropbox\\WASHB-cognitive-development-analysis\\results\\raw\\table-1.Rdata")
+save(enroll_balance,file="C:\\Users\\kdas\\Dropbox\\WASHB-cognitive-development-analysis\\results\\raw\\enroll-balance.Rdata")

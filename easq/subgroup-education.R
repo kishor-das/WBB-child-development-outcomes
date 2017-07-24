@@ -13,7 +13,7 @@
 #            washb-bangladesh-easq-year2.dta
 #            washb-bangladesh-subgroupvar.dta
 # output files:
-#            table-s7.Rdata
+#            sbu-edu.Rdata
 #-------------------------------------------
 
 #-------------------------------------------
@@ -481,7 +481,7 @@ mot_glue<-      data.frame(a=c("\u005ctextbf{Gross Motor  z-score}"),b=c(""),c=c
 per_glue<-      data.frame(a=c("\u005ctextbf{Personal-social  z-score}"),b=c(""),c=c(""),d=c(""),e=c(""),f=c(""),g=c(""),h=c(""))
 combined_glue<- data.frame(a=c("\u005ctextbf{Combined z-score}"),b=c(""),c=c(""),d=c(""),e=c(""),f=c(""),g=c(""),h=c(""))
 
-table_s7<-rbind(
+sub_edu<-rbind(
   com_glue,
   com_df,
   mot_glue,
@@ -491,4 +491,4 @@ table_s7<-rbind(
   combined_glue,
   combined_df  
 )
-save(table_s7,file="C:\\Users\\kdas\\Dropbox\\WASHB-cognitive-development-analysis\\results\\raw\\table-s7.Rdata")
+save(sub_edu,file="C:\\Users\\kdas\\Dropbox\\WASHB-cognitive-development-analysis\\results\\raw\\sub-edu.Rdata")

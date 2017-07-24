@@ -12,9 +12,9 @@
 #----------------------------
 # input files :
 #            washb-bangladesh-enrol.dta
-#            washb-bangladesh-follow-up.dta
+#            washb-bangladesh-lost-follow-up.dta
 # output files:
-#            table-s10.Rdata
+#            lost-balance.Rdata
 #---------------------------
 
 #---------------------------
@@ -38,7 +38,7 @@ dformat<-function(x,d){
 # load the analysis dataset
 #-------------------------------
 enrol<-read.dta("C:\\Users\\kdas\\Dropbox\\WASHB-Bangladesh-data\\2-child-development-outcomes-datasets\\washb-bangladesh-enrol.dta")
-lost<-  read.dta("C:\\Users\\kdas\\Dropbox\\WASHB-Bangladesh-data\\2-child-development-outcomes-datasets\\washb-bangladesh-follow-up.dta")
+lost<-  read.dta("C:\\Users\\kdas\\Dropbox\\WASHB-Bangladesh-data\\2-child-development-outcomes-datasets\\washb-bangladesh-lost-follow-up.dta")
 
 lost<-rename(lost, replace=c("status_endline"="status"))
 enrol<-merge(enrol,lost,by="dataid")
@@ -51,7 +51,7 @@ group<-c("","Complete","Incomplete")
 #--------------------------------------------
 
 n_households<-NULL
-n_households[""]<-"No. of households"
+n_households[""]<-"No. of compounds"
 for(grp in group[2:3]){
   n_households[grp]<-table(enrol$status)[[grp]]
 }
@@ -246,8 +246,7 @@ glue_hw<-c("\u005ctextbf{Handwashing}","","")
 glue_steplat<-c("\u005cMyIndent Within 6 steps of latrine","","")
 glue_stepkit<-c("\u005cMyIndent Within 6 steps of kitchen","","")
 
-table_s10<-rbind(
-  n_clust,
+lost_balance<-rbind(
   n_households,
   glue_maternal,
   mom_age,
@@ -288,4 +287,4 @@ table_s10<-rbind(
   hw_hwkitsoap
 )
 
-save(table_s10,file="C:\\Users\\kdas\\Dropbox\\WASHB-cognitive-development-analysis\\results\\raw\\table-s10.Rdata")
+save(lost_balance,file="C:\\Users\\kdas\\Dropbox\\WASHB-cognitive-development-analysis\\results\\raw\\lost-balance.Rdata")

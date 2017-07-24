@@ -12,7 +12,7 @@
 # input files :
 #            washb-bangladesh-easq-year2.dta
 # output files:
-#            table-3.Rdata
+#            easq.Rdata
 #---------------------------
 
 #---------------------------
@@ -339,9 +339,9 @@ mot_glue<-data.frame(a=c("\u005ctextbf{Gross Motor  z-score}"),b=c(""),c=c(""),d
 per_glue<-data.frame(a=c("\u005ctextbf{Personal-social  z-score}"),b=c(""),c=c(""),d=c(""),e=c(""),f=c(""))
 combined_glue<-data.frame(a=c("\u005ctextbf{Combined z-score}"),b=c(""),c=c(""),d=c(""),e=c(""),f=c(""))
 
-table_3<-rbind(com_glue,com_df,mot_glue,mot_df,per_glue,per_df,combined_glue,combined_df)
+easq<-rbind(com_glue,com_df,mot_glue,mot_df,per_glue,per_df,combined_glue,combined_df)
 
-save(table_3,file="C:\\Users\\kdas\\Dropbox\\WASHB-cognitive-development-analysis\\results\\raw\\table-3.Rdata")
+save(easq,file="C:\\Users\\kdas\\Dropbox\\WASHB-cognitive-development-analysis\\results\\raw\\easq.Rdata")
 
 
   
